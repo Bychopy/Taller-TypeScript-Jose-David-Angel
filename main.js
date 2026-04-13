@@ -1,12 +1,12 @@
 import { series } from './data.js';
-function calcularPromedioDeTemporadas(series) {
+function calculateSeasonsAverage(series) {
     if (series.length === 0) {
         return 0;
     }
     const totalSeasons = series.reduce((acc, serie) => acc + serie.seasons, 0);
     return totalSeasons / series.length;
 }
-function renderPromedioDeTemporadas(series) {
+function renderSeasonsAverage(series) {
     const averageElement = document.getElementById('seasons-average');
     if (!(averageElement instanceof HTMLParagraphElement)) {
         return;
